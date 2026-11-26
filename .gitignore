@@ -1,0 +1,5 @@
+node_modules/
+.DS_Store
+*.log
+# dist/ IS committed: the apps install this package straight from GitHub,
+# so the built files must be in the repo. Run `pnpm build` before committing.

@@ -1,0 +1,40 @@
+{
+    "name": "@forthmk/thermal-printer",
+    "version": "0.1.0",
+    "description": "Thermal printing for the POS and the Commissary: one receipt layout, any paper size (50×30, 50×80, 58 mm, 80 mm), Niimbot / ESC/POS / print-screen drivers, in the browser or a Capacitor APK.",
+    "author": "forthmk",
+    "license": "ISC",
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "sideEffects": false,
+    "scripts": {
+        "build": "tsc -p tsconfig.build.json",
+        "typecheck": "tsc -p tsconfig.json --noEmit",
+        "test": "node --import tsx --test test/*.test.ts"
+    },
+    "peerDependencies": {
+        "@mmote/niimbluelib": ">=0.49.1"
+    },
+    "peerDependenciesMeta": {
+        "@mmote/niimbluelib": {
+            "optional": true
+        }
+    },
+    "devDependencies": {
+        "@mmote/niimbluelib": "0.49.1",
+        "@types/node": "^22.20.5",
+        "tsx": "^4.19.0",
+        "typescript": "^5.7.0"
+    },
+    "packageManager": "pnpm@11.5.0"
+}
